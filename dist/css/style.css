@@ -1,9 +1,32 @@
-.DogHero{
-  display: -webkit-box;
-  display: flex;
+/* -- Custom Media queries */
+
+.DogType{
+  background:url('../images/beagles.jpg') #466173;
+  padding: 20px;
+  height: 500px;
 }
 
-  .DogHero-Hero{
-    padding: 30px;
-    height: 10px;
+@media (-webkit-min-device-pixel-ratio: 2){
+
+.DogType{
+    background-image: url('../images/background2px.jpg')
+}
   }
+
+.DogType-Header{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+
+.DogType-copy-title{
+      font-size: 63px;
+    }
+
+.DogFooter{
+  background-color: #273b47;
+}

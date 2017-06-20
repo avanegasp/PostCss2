@@ -35,6 +35,7 @@ gulp.task('css', function(){
 
     gulp.task('watch', function () {
       gulp.watch('./src/*.css', ['css'])
+      gulp.watch('./images/*.jpg')
       gulp.watch('./dist/*.html').on('change',browserSync.reload)
     })
 

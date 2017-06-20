@@ -1,8 +1,39 @@
-.DogHero{
-  display: flex;
+:root{
+  --bg-body: #fafafa;
+  --bg-header: #466173;
+  --bg-footer: #273b47;
 
-  &-Hero{
-    padding: 30px;
-    height: 10px;
+  --fontSize: 18px;
+}
+
+/* -- Custom Media queries */
+@custom-media --mobile (max-width: 500px);
+@custom-media --tablet (max-width: 650px);
+@custom-media --desktop (max-width: 800px);
+@custom-media --retina (-webkit-min-device-pixel-ratio: 2);
+
+.DogType{
+  background:url('../images/beagles.jpg') var(--bg-header);
+  padding: 20px;
+  height: 500px;
+
+  @media (--retina){
+    background-image: url('../images/background2px.jpg')
   }
+
+  &-Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-copy{
+    &-title{
+      font-size: calc(var(--fontSize)*3.5);
+    }
+  }
+}
+
+.DogFooter{
+  background-color: var(--bg-footer);
 }
