@@ -1,6 +1,6 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
-var autoprefixer = require('autoprefixer')
+var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var browserSync = require('browser-sync').create()
 
@@ -20,8 +20,8 @@ gulp.task('serve', function(){
 
 gulp.task('css', function(){
   var processors = [
-    autoprefixer({browsers: ['> 5%', 'ie 8']}),
-      cssnested
+      cssnested,
+      cssnext({browsers: ['> 5%', 'ie 8']})
   ]
 
     return gulp.src('./src/*.css')
