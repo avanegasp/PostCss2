@@ -1,3 +1,9 @@
-body{
-  background: green;
+.DogHero{
+  display: -webkit-box;
+  display: flex;
 }
+
+  .DogHero-Hero{
+    padding: 30px;
+    height: 10px;
+  }
