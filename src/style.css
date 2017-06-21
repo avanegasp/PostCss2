@@ -32,7 +32,7 @@
   }
 
   &-logo{
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
     &:hover {
       filter: blur(4px);
     }
