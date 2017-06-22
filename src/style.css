@@ -1,6 +1,7 @@
 @import './variables.css';
 @import './iconsfonts.css';
 
+@lost flexbox flex;
 
 /*Mixins*/
   @define-mixin btn $textColor, $bgColor, $bgColorStart, $bgColorEnd {
@@ -42,6 +43,23 @@
         height: 200px;
       }
     }
+  }
+
+  .u-Grid{
+    background: gray;
+    lost-center: 800px;
+    lost-utility: clearfix;
+
+    &-column {
+      background-color: blue;
+      lost-colum: 1/5;
+      }
+  }
+
+  .u-wrapper{
+    max-width: 800px;
+    margin: auto;
+    position: relative;
   }
 
 .DogType{
