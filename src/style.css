@@ -16,6 +16,22 @@
 @custom-media --desktop (max-width: 800px);
 @custom-media --retina (-webkit-min-device-pixel-ratio: 2);
 
+
+/*Mixins*/
+  @define-mixin btn $textColor, $bgColor, $bgColorStart, $bgColorEnd {
+    border-radius: 12px;
+    border: none;
+    color: $(textColor);
+    padding: 7px 12px;
+    cursor:pointer;
+    font-size: var(--fontSize);
+    text-decoration: none;
+    background: $(bgColor);
+    background: linear-gradient(to left, $(bgColorStart), $(bgColorEnd));
+  }
+
+
+
 .DogType{
   background:url('../images/beagles.jpg') var(--bg-header);
   padding: 20px;
@@ -36,6 +52,9 @@
     &:hover {
       filter: blur(4px);
     }
+    &{
+
+    }
   }
 
   &-copy{
@@ -43,19 +62,16 @@
       font-size: calc(var(--fontSize)*3.5);
     }
     &-btn{
-      border-radius: 12px;
-      border: none;
-      color: var(--bg-body);
-      padding: 7px 12px;
-      cursor:pointer;
-      font-size: var(--fontSize);
-      text-decoration: none;
-      background: var(--btn-gradient);
-      background: linear-gradient(to left, var(--btn-gradient-start), var(--btn-gradient-end));
+    @mixin btn var(--bg-body), var(--btn-gradient),var(--btn-gradient-start), var(--btn-gradient-end);
     }
   }
 }
 
 .DogFooter{
   background-color: var(--bg-footer);
+  &-form{
+    &-btn{
+      @mixin btn var(--bg-body), var(--btn-gradient), var(--btn-gradient-start), var(--btn-gradient-end);
+    }
+  }
 }

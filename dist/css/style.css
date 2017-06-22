@@ -1,17 +1,28 @@
 /* -- Custom Media queries */
 
+
+/*Mixins*/
+
+
+
 .DogType{
   background:url('../images/beagles.jpg') #466173;
   padding: 20px;
   height: 500px;
 }
 
+
+
 @media (-webkit-min-device-pixel-ratio: 2){
+
+
 
 .DogType{
     background-image: url('../images/background2px.jpg')
 }
   }
+
+
 
 .DogType-Header{
     display: -webkit-box;
@@ -23,9 +34,13 @@
             justify-content: space-between;
   }
 
+
+
 .DogType-logo{
     transition: all 0.3s ease-in;
   }
+
+
 
 .DogType-logo:hover {
       filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
@@ -33,11 +48,37 @@
               filter: blur(4px);
     }
 
+
+
+.DogType-logo{
+
+    }
+
+
+
 .DogType-copy-title{
       font-size: 63px;
     }
 
+
+
 .DogType-copy-btn{
+    border-radius: 12px;
+    border: none;
+    color: #fafafa;
+    padding: 7px 12px;
+    cursor:pointer;
+    font-size: 18px;
+    text-decoration: none;
+    background: #49b800;
+    background: linear-gradient(to left, rgb(71, 179, 0), rgb(235, 39, 0));
+    }
+
+.DogFooter{
+  background-color: #273b47;
+}
+
+.DogFooter-form-btn{
       border-radius: 12px;
       border: none;
       color: #fafafa;
@@ -48,7 +89,3 @@
       background: #49b800;
       background: linear-gradient(to left, rgb(71, 179, 0), rgb(235, 39, 0));
     }
-
-.DogFooter{
-  background-color: #273b47;
-}
